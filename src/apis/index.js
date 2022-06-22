@@ -97,15 +97,32 @@ async function createApiInLimitTime(network, endpoint, logger = console) {
   ]);
 }
 
+async function createApiForChain(chain, endpoints, logger = console) {
+  for (const endpoint of endpoints) {
+    if (!endpoint) {
+      continue;
+    }
+
+    try {
+      await createApiInLimitTime(chain, endpoint);
+      console.log(`${ chain }: ${ endpoint } created!`);
+    } catch (e) {
+      logger.info(
+        `Can not connected to ${ endpoint } in ${ nodeTimeoutSeconds } seconds, just disconnect it`
+      );
+    }
+  }
+}
+
 function getApis(chain) {
   return (chainApis[chain] || []).map(({ api }) => api);
 }
 
 function logApiStatus(logger = console) {
   Object.entries(chainApis).map(([chain, apis]) => {
-    logger.info(`chain: ${chain}`);
+    logger.info(`chain: ${ chain }`);
     for (const { endpoint, api } of apis) {
-      logger.info(`\t ${endpoint} connected: ${api.isConnected}`);
+      logger.info(`\t ${ endpoint } connected: ${ api.isConnected }`);
     }
   });
 }
@@ -113,6 +130,7 @@ function logApiStatus(logger = console) {
 module.exports = {
   createApi,
   createApiInLimitTime,
+  createApiForChain,
   getApis,
   logApiStatus,
 }
