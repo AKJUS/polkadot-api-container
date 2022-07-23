@@ -1,14 +1,14 @@
 {
   "name": "@osn/polkadot-api-container",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "repository": "git@github.com:opensquare-network/polkadot-api-container.git",
   "author": "OpenSquare <https://www.opensquare.network/>",
   "license": "Apache-2.0",
   "dependencies": {
     "@osn/provider-options": "^1.0.7",
-    "@polkadot/api": "^8.9.1",
-    "@polkadot/util": "^9.6.1",
+    "@polkadot/api": "8.12.1",
+    "@polkadot/util": "10.0.1",
     "lodash.isnil": "^4.0.0"
   },
   "peerDependencies": {
