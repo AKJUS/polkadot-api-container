@@ -19,10 +19,10 @@
   resolved "https://registry.npmjs.org/@noble/secp256k1/-/secp256k1-1.6.3.tgz#7eed12d9f4404b416999d0c87686836c4c5c9b94"
   integrity sha512-T04e4iTurVy7I8Sw4+c5OSN9/RkPlo1uKxAomtxQNLq8j1uPAqnsqG1bqvY3Jv7c13gyr6dui0zmh/I3+f/JaQ==
 
-"@osn/provider-options@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.npmjs.org/@osn/provider-options/-/provider-options-1.0.7.tgz#bd7fce7426b44c370812376704aa9092ca6cc216"
-  integrity sha512-8P45Pc/N9FrFJz4R922J47w2u8ZCQ8e7/UpMpUmRKayCgQ3oCSH1xtsKYNozbSUsuGNsWJ+UZaap2AfIJIrgjA==
+"@osn/provider-options@1.0.9":
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/@osn/provider-options/-/provider-options-1.0.9.tgz#ee0740c78c2c39b2d29d4d7f3b3e957fcdcc747f"
+  integrity sha512-LhDTPkSPQjwco+5n7L4eLXeTV7uDABxQBcR3Ss5JwQkRhUtuSx7eCLQLT7xBX65rlepeSp/UVlIlOTHgrtbEjA==
 
 "@polkadot/api-augment@8.12.1":
   version "8.12.1"
