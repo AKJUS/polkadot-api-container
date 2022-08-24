@@ -2,6 +2,7 @@ const { rejectInTime } = require("../utils/rejectInTime");
 const { chains } = require("../utils/chains");
 const { ApiPromise, WsProvider } = require("@polkadot/api");
 const {
+  altairOptions,
   bifrostOptions,
   khalaOptions,
   karuraOptions,
@@ -60,6 +61,8 @@ async function createApi(network, endpoint, logger = console) {
     options = crustOptions;
   } else if (chains.centrifuge === network) {
     options = centrifugeOptions;
+  } else if (chains.altair === network) {
+    options = altairOptions;
   }
 
   let api;

@@ -14,6 +14,7 @@ const chains = {
   crab: "crab",
   polkadex: "polkadex",
   centrifuge: "centrifuge",
+  altair: "altair",
 };
 
 module.exports = {
