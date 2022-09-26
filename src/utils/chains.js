@@ -3,6 +3,7 @@ const chains = {
   kusama: "kusama",
   karura: "karura",
   khala: "khala",
+  phala: "phala",
   statemine: "statemine",
   bifrost: "bifrost",
   kintsugi: "kintsugi",
@@ -15,6 +16,10 @@ const chains = {
   polkadex: "polkadex",
   centrifuge: "centrifuge",
   altair: "altair",
+  litmus: "litmus",
+  zeitgeist: "zeitgeist",
+  shiden: "shiden",
+  parallel: "parallel",
 };
 
 module.exports = {

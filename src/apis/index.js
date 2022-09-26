@@ -10,6 +10,8 @@ const {
   kintsugiOptions,
   crustOptions,
   centrifugeOptions,
+  parallelOptions,
+  shidenOptions,
 } = require("@osn/provider-options");
 
 const nodeTimeoutSeconds = 20;
@@ -49,7 +51,7 @@ async function createApi(network, endpoint, logger = console) {
   let options = {};
   if ([chains.karura, chains.acala].includes(network)) {
     options = karuraOptions;
-  } else if (chains.khala === network) {
+  } else if ([chains.khala, chains.phala].includes(network)) {
     options = khalaOptions;
   } else if (chains.bifrost === network) {
     options = bifrostOptions;
@@ -63,6 +65,10 @@ async function createApi(network, endpoint, logger = console) {
     options = centrifugeOptions;
   } else if (chains.altair === network) {
     options = altairOptions;
+  } else if (chains.parallel === network) {
+    options = parallelOptions;
+  } else if (chains.shiden === network) {
+    options = shidenOptions;
   }
 
   let api;

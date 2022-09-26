@@ -6,8 +6,8 @@
   "author": "OpenSquare <https://www.opensquare.network/>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@osn/provider-options": "1.0.10",
-    "@polkadot/api": "9.2.3",
+    "@osn/provider-options": "1.0.14",
+    "@polkadot/api": "9.4.2",
     "lodash.isnil": "^4.0.0"
   },
   "peerDependencies": {
