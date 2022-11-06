@@ -20,6 +20,8 @@ const chains = {
   zeitgeist: "zeitgeist",
   shiden: "shiden",
   parallel: "parallel",
+  basilisk: "basilisk",
+  hydradx: "hydradx",
 };
 
 module.exports = {

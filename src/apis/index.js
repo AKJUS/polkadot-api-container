@@ -13,6 +13,7 @@ const {
   parallelOptions,
   shidenOptions,
 } = require("@osn/provider-options");
+const allOptions = require("@osn/provider-options");
 
 const nodeTimeoutSeconds = 20;
 
@@ -48,7 +49,7 @@ async function reConnect(network, endpoint, logger) {
 async function createApi(network, endpoint, logger = console) {
   const provider = new WsProvider(endpoint, 100);
 
-  let options = {};
+  let options;
   if ([chains.karura, chains.acala].includes(network)) {
     options = karuraOptions;
   } else if ([chains.khala, chains.phala].includes(network)) {
@@ -69,6 +70,8 @@ async function createApi(network, endpoint, logger = console) {
     options = parallelOptions;
   } else if (chains.shiden === network) {
     options = shidenOptions;
+  } else {
+    options = allOptions[network] || {};
   }
 
   let api;
