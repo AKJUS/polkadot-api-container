@@ -1,18 +1,5 @@
 const { rejectInTime } = require("../utils/rejectInTime");
-const { chains } = require("../utils/chains");
 const { ApiPromise, WsProvider } = require("@polkadot/api");
-const {
-  altairOptions,
-  bifrostOptions,
-  khalaOptions,
-  karuraOptions,
-  polkadexOptions,
-  kintsugiOptions,
-  crustOptions,
-  centrifugeOptions,
-  parallelOptions,
-  shidenOptions,
-} = require("@osn/provider-options");
 const allOptions = require("@osn/provider-options");
 
 const nodeTimeoutSeconds = 20;
@@ -49,31 +36,7 @@ async function reConnect(network, endpoint, logger) {
 async function createApi(network, endpoint, logger = console) {
   const provider = new WsProvider(endpoint, 100);
 
-  let options;
-  if ([chains.karura, chains.acala].includes(network)) {
-    options = karuraOptions;
-  } else if ([chains.khala, chains.phala].includes(network)) {
-    options = khalaOptions;
-  } else if (chains.bifrost === network) {
-    options = bifrostOptions;
-  } else if (chains.polkadex === network) {
-    options = polkadexOptions;
-  } else if ([chains.kintsugi, chains.interlay].includes(network)) {
-    options = kintsugiOptions;
-  } else if (chains.crust === network) {
-    options = crustOptions;
-  } else if (chains.centrifuge === network) {
-    options = centrifugeOptions;
-  } else if (chains.altair === network) {
-    options = altairOptions;
-  } else if (chains.parallel === network) {
-    options = parallelOptions;
-  } else if (chains.shiden === network) {
-    options = shidenOptions;
-  } else {
-    options = allOptions[network] || {};
-  }
-
+  const options = allOptions[network] || {};
   let api;
   try {
     api = await ApiPromise.create({ provider, ...options });
