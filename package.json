@@ -6,7 +6,7 @@
   "author": "OpenSquare <https://www.opensquare.network/>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@osn/provider-options": "^1.1.10",
+    "@osn/provider-options": "^1.1.11",
     "@polkadot/api": "^14.2.1",
     "lodash.isnil": "^4.0.0"
   },
