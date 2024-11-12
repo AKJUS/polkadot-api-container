@@ -14,10 +14,10 @@
   resolved "https://registry.npmjs.org/@noble/hashes/-/hashes-1.4.0.tgz#45814aa329f30e4fe0ba49426f49dfccdd066426"
   integrity sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==
 
-"@osn/provider-options@^1.1.10":
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/@osn/provider-options/-/provider-options-1.1.10.tgz#9082d6553526e41cc55c78b389581ea8141c32a5"
-  integrity sha512-qW7DBol9Lq/LVPNXK0OTVwoOZCNuPodZthm3BUES0Tn7GcanJLwp6wSrLU0X6uYJFwY4n25YBPQrnbaC9WECTA==
+"@osn/provider-options@^1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@osn/provider-options/-/provider-options-1.1.11.tgz#cf2363fcfc1972677b317ce7be05e1c7991e994b"
+  integrity sha512-J5RprpQSZGYOAJQEp8siprOMQGn990Nqyw/+TP06E/DsxPsbA52P8NsIxwbDQWSYmxHdOp3seCny12c8kE1JXA==
 
 "@polkadot-api/json-rpc-provider-proxy@^0.1.0":
   version "0.1.0"
